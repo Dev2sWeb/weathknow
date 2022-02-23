@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerlinks}}
+</head>
+
+<body>
+    {{>navbar}}
+    <!-- <h1>this is the home page of weathknow</h1> -->
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-md-8 col-12 mb-auto head-left">
+                <h3>Welcome to WeathKnow</h3>
+                <h1>Here you can get the just <span style="color: teal; font-size: larger;">Weather</span> update of
+                    your city</h1>
+
+                {{!-- <a href="/weather"><button type="button" class="btn btn-outline-dark">Check Now</button></a> --}}
+            </div>
+            <div class="col-md-4 col-12 head-right">
+                <form >
+                    <div class="city_form">
+                        <input type="text" id="cityName" placeholder="Enter your city name here ....."> 
+                        <span><input type="submit" value="Search" class="search" id="searchbtn"></span>
+
+                    </div>
+                </form>
+                <div class="city_info">
+                    <div class="top_layer">
+                        <p class="day" id="day">Day</p>
+                        <p class="date" id="date">Date</p>
+                    </div>
+                    <div class="main_layer">
+                        <div id="city_weath">
+                            <p class="city" id="city">Your city name here...</p><span><p id="weather_status"></p></span>
+                        </div>
+                        <div class="mid-layer data-hid">
+                            <p id="temp" class="temp"><span id="temp_num">Temp</span> <span id="temp_deg"><sup>o</sup>C</span></p>
+                            <p id="temp-status" class="temp-status"><i class="fa-solid fa-cloud"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js">
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+{{!-- api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} --}}
